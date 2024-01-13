@@ -11,6 +11,7 @@ const AddProductForm = () => {
   const descInputRef = useRef(null);
     const categoryInputRef = useRef(null);
     const priceInputRef = useRef(null);
+    const quantityInputRef = useRef(null);
   const [descError, setDescError] = useState('');
   const [priceError, setPriceError] = useState('');
   const [nameError, setNameError] = useState('');
@@ -40,7 +41,7 @@ const config = {
         price: priceInputRef.current.value,
         category: selectedCategory,
         seller: 1,
-        quantity: 1,
+        quantity: quantityInputRef.current.value,
     };
 
     BaseUrl.post('customer/products/', productData, config).then((response) => {
@@ -95,6 +96,17 @@ const config = {
             >
             {categories.map((item, index) => <option key={index} value={item.id}>{item.name}</option>)}
             </select>
+            
+          </div>
+          <div className="mb-4">
+            <label htmlFor="price">Quantity:</label>
+            <input
+              type="text"
+              id="price"
+              ref={quantityInputRef}
+            //   onBlur={validateConfirmPassword}
+              className="w-full p-2 border border-gray-300"
+            />
             
           </div>
 

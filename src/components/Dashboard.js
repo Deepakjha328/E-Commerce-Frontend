@@ -45,7 +45,7 @@ function Dashboard(){
             key={index}
             className="bg-white shadow-lg rounded-lg p-6"
           >
-            <Card name={item.name} desc={item.desc} price={item.price} category={categories.filter((ele) => ele.id == item?.category)[0]?.name} id={item.id} qty={item.qty} setProducts={setProducts}/>
+            <Card name={item.name} desc={item.desc} quantity={item.quantity} price={item.price} category={categories.filter((ele) => ele.id == item?.category)[0]?.name} id={item.id} qty={item.qty} setProducts={setProducts}/>
           </div>
         ))}
       </div>

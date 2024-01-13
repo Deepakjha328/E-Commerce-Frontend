@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { toastr } from 'react-redux-toastr';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { BaseUrl } from './api-services';

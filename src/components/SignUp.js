@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { toastr } from 'react-redux-toastr'
 import { useNavigate } from 'react-router-dom';
 import { BaseUrl } from './api-services';
 import { enqueueSnackbar } from 'notistack';
